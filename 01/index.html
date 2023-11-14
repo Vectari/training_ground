@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="link"></div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam animi fugiat mollitia recusandae, dolor
+    facere excepturi facilis earum ab aspernatur nisi exercitationem ipsum incidunt tempora molestiae est maiores.
+    Accusamus?</p>
+  <div class="link"></div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam animi fugiat mollitia recusandae, dolor
+    facere excepturi facilis earum ab aspernatur nisi exercitationem ipsum incidunt tempora molestiae est maiores.
+    Accusamus?</p>
+  <div class="link"></div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam animi fugiat mollitia recusandae, dolor
+    facere excepturi facilis earum ab aspernatur nisi exercitationem ipsum incidunt tempora molestiae est maiores.
+    Accusamus?</p>
+  <div class="link"></div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam animi fugiat mollitia recusandae, dolor
+    facere excepturi facilis earum ab aspernatur nisi exercitationem ipsum incidunt tempora molestiae est maiores.
+    Accusamus?</p>
+  <div class="link"></div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam animi fugiat mollitia recusandae, dolor
+    facere excepturi facilis earum ab aspernatur nisi exercitationem ipsum incidunt tempora molestiae est maiores.
+    Accusamus?</p>
+  <script>
+    document.querySelectorAll(".link").forEach((link) => {
+      const anchorElement = document.createElement("a");
+      anchorElement.textContent = "Zrozumieć React";
+      anchorElement.href = "https://zrozumiecreact.pl";
+      anchorElement.target = "_blank";
+      anchorElement.rel = "noopener noreferrer";
+      link.append(anchorElement);
+    })
+  </script>
+</body>
+
+</html>
