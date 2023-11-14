@@ -1,43 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
-  <div class="link"></div>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam animi fugiat mollitia recusandae, dolor
-    facere excepturi facilis earum ab aspernatur nisi exercitationem ipsum incidunt tempora molestiae est maiores.
-    Accusamus?</p>
-  <div class="link"></div>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam animi fugiat mollitia recusandae, dolor
-    facere excepturi facilis earum ab aspernatur nisi exercitationem ipsum incidunt tempora molestiae est maiores.
-    Accusamus?</p>
-  <div class="link"></div>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam animi fugiat mollitia recusandae, dolor
-    facere excepturi facilis earum ab aspernatur nisi exercitationem ipsum incidunt tempora molestiae est maiores.
-    Accusamus?</p>
-  <div class="link"></div>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam animi fugiat mollitia recusandae, dolor
-    facere excepturi facilis earum ab aspernatur nisi exercitationem ipsum incidunt tempora molestiae est maiores.
-    Accusamus?</p>
-  <div class="link"></div>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam animi fugiat mollitia recusandae, dolor
-    facere excepturi facilis earum ab aspernatur nisi exercitationem ipsum incidunt tempora molestiae est maiores.
-    Accusamus?</p>
-  <script>
-    document.querySelectorAll(".link").forEach((link) => {
-      const anchorElement = document.createElement("a");
-      anchorElement.textContent = "Zrozumieć React";
-      anchorElement.href = "https://zrozumiecreact.pl";
-      anchorElement.target = "_blank";
-      anchorElement.rel = "noopener noreferrer";
-      link.append(anchorElement);
-    })
-  </script>
-</body>
-
+  <body>
+    <div class="link"></div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam
+      animi fugiat mollitia recusandae, dolor facere excepturi facilis earum ab
+      aspernatur nisi exercitationem ipsum incidunt tempora molestiae est
+      maiores. Accusamus?
+    </p>
+    <div class="link"></div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam
+      animi fugiat mollitia recusandae, dolor facere excepturi facilis earum ab
+      aspernatur nisi exercitationem ipsum incidunt tempora molestiae est
+      maiores. Accusamus?
+    </p>
+    <div class="link"></div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam
+      animi fugiat mollitia recusandae, dolor facere excepturi facilis earum ab
+      aspernatur nisi exercitationem ipsum incidunt tempora molestiae est
+      maiores. Accusamus?
+    </p>
+    <div class="link"></div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam
+      animi fugiat mollitia recusandae, dolor facere excepturi facilis earum ab
+      aspernatur nisi exercitationem ipsum incidunt tempora molestiae est
+      maiores. Accusamus?
+    </p>
+    <div class="link"></div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam
+      animi fugiat mollitia recusandae, dolor facere excepturi facilis earum ab
+      aspernatur nisi exercitationem ipsum incidunt tempora molestiae est
+      maiores. Accusamus?
+    </p>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script>
+      document.querySelectorAll(".link").forEach((link) => {
+        const anchorElement = React.createElement(
+          "a",
+          {
+            href: "https://zrozumiecreact.pl",
+            target: "_blank",
+            rel: "noopener noreferrer",
+          },
+          "Sprawdź kurs"
+        );
+        ReactDOM.createRoot(link).render(anchorElement);
+      });
+    </script>
+  </body>
 </html>
