@@ -5,7 +5,7 @@ const element = (
   <>
     <h1>Nasza strona!</h1>
     <main>
-      <LinkComponent text="GOOGLE" open={true} />
+      <LinkComponent text="GOOOGLE" open={true} />
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur
         nostrum ab ullam facilis, voluptas quaerat consequatur voluptatem
