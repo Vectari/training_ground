@@ -1,5 +1,5 @@
 export function PersonInfo({ person }) {
-  let telSection =
+  const telSection =
     person.tel === undefined ? null : (
       <div>
         Telefon: <a href={`tel:${person.tel}`}>{person.tel}</a>
