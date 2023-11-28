@@ -19,6 +19,8 @@ function App() {
     mail: "ola.kow@gmail.com",
   };
 
+  const img = "https://zrozumiecreact.pl/dog.jpg";
+
   return (
     <>
       <PersonInfo person={jan} />
@@ -26,6 +28,7 @@ function App() {
       <PersonInfo person={janina} />
       <br />
       <PersonInfo person={ola} />
+      <img src={img} alt="dog" />
     </>
   );
 }
