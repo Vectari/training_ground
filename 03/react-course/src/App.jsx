@@ -1,6 +1,6 @@
 function App() {
   function handleClick() {
-    alert("klik!")
+    alert("klik!");
   }
 
   return (
@@ -10,7 +10,7 @@ function App() {
       <h2>Fabuła:</h2>
       <p>Strzały i kosmos.</p>
       <button onClick={handleClick}>SPOILER</button>
-      <p>Gwiezdne Wojny są słabe.</p>
+      <p>Gwiezdne Wojny są słabe!</p>
     </>
   );
 }
