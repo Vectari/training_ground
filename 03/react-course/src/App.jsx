@@ -6,15 +6,12 @@ function App() {
 
   function handleShowSpoilerClick() {
     setIsSpoilerShown(true);
-    console.log("handleShowSpoilerClick!");
     setCloseWarningClick(false);
   }
 
   function handleCloseWarningClick() {
     setCloseWarningClick(false);
   }
-
-  console.log("app");
 
   return (
     <>
