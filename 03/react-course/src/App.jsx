@@ -23,7 +23,6 @@ function App() {
     setNumberOfLikes((previousNumberOfLikes) => previousNumberOfLikes + 1);
     setNumberOfLikes((previousNumberOfLikes) => previousNumberOfLikes + 1);
   }
-  //
 
   return (
     <>
