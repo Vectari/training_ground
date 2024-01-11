@@ -11,12 +11,37 @@ const initialReviews = [
 
 function App() {
   const [reviews, setReviews] = useState(initialReviews);
+  const [counterShown, setCounterShown] = useState(true);
+  const [numberOfLikes, setNumberOfLikes] = useState(60);
+
+  function handleLikeButtonClick() {
+    setNumberOfLikes((previousNumberOfLikes) => previousNumberOfLikes + 1);
+  }
+
+  function handleLoveButtonClick() {
+    setNumberOfLikes((previousNumberOfLikes) => previousNumberOfLikes + 1);
+    setNumberOfLikes((previousNumberOfLikes) => previousNumberOfLikes + 1);
+    setNumberOfLikes((previousNumberOfLikes) => previousNumberOfLikes + 1);
+  }
 
   return (
     <>
       <h1>Gwiezdne Wojny V</h1>
       <h2>Rok produkcji: 1980</h2>
-      <LikesCounter number={50} />
+      <button
+        onClick={() => {
+          setCounterShown((prevCounterShown) => !prevCounterShown);
+        }}
+      >
+        {counterShown ? "Ukryj counter" : "Pokaż counter"}
+      </button>
+      {counterShown && (
+        <LikesCounter
+          numberOfLikes={numberOfLikes}
+          onLikeButtonClick={handleLikeButtonClick}
+          onLoveButtonClick={handleLoveButtonClick}
+        />
+      )}
       <Plot />
       <Reviews reviews={reviews} />
       <Form
