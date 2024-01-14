@@ -29,9 +29,9 @@
   width: 100px;
   color: white;
   transition: background 0.3s, color 0.3s;
-}
 
-.btn:hover {
-  color: salmon;
-  background: white;
+  &:hover {
+    color: salmon;
+    background: white;
+  }
 }
