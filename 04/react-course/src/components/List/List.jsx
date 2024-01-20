@@ -15,7 +15,7 @@ const StyledList = styled.ul`
 export function List() {
   return (
     <>
-      <StyledButton $margin={30} onClick={() => alert(`Liczba emoji to: ${emojis.length}`)}>
+      <StyledButton $primary={true} $margin={30} onClick={() => alert(`Liczba emoji to: ${emojis.length}`)}>
         Pokaż liczę emoji
       </StyledButton>
       <StyledList>

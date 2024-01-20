@@ -7,12 +7,12 @@ export const StyledButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
   width: 100px;
-  color: salmon;
+  color: ${({ $primary }) => ($primary ? "salmon" : "white")};
   transition: background 0.3s;
-  margin: ${({$margin}) => $margin + "px"};
+  margin: ${({ $margin }) => $margin + "px"};
 
   &:hover {
-    color: white;
-    background: salmon;
+    color: ${({ $primary }) => ($primary ? "white" : "salmon")};
+    background: ${({ $primary }) => ($primary ? "salmon" : "white")};
   }
 `;
