@@ -12,15 +12,23 @@ const StyledList = styled.ul`
   padding: 30px;
 `;
 
+const StyledListItem = styled(Item)`
+  margin-bottom: 50px;
+`;
+
 export function List() {
   return (
     <>
-      <StyledButton $primary={true} $margin={30} onClick={() => alert(`Liczba emoji to: ${emojis.length}`)}>
+      <StyledButton
+        $primary={true}
+        $margin={30}
+        onClick={() => alert(`Liczba emoji to: ${emojis.length}`)}
+      >
         Pokaż liczę emoji
       </StyledButton>
       <StyledList>
         {emojis.map((emoji) => (
-          <Item key={emoji} emoji={emoji} />
+          <StyledListItem key={emoji} emoji={emoji} />
         ))}
       </StyledList>
     </>

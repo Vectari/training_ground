@@ -33,11 +33,11 @@ const StyledButton = styled.button`
   }
 `;
 
-export function Item({ emoji }) {
+export function Item({ emoji, className }) {
   const [zoomed, setZoomed] = useState(false);
 
   return (
-    <StyledItem>
+    <StyledItem className={className}>
       <StyledEmoji $zoomed={zoomed}>{emoji}</StyledEmoji>
       <StyledButton
         onClick={() => {
