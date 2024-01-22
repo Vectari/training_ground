@@ -24,7 +24,7 @@ export function List() {
       </button>
       <ul>
         {emojis.map((emoji) => (
-          <StyledListItem key={emoji} emoji={emoji} />
+          <Item key={emoji} emoji={emoji} />
         ))}
       </ul>
     </>
