@@ -19,18 +19,14 @@ const StyledListItem = styled(Item)`
 export function List() {
   return (
     <>
-      <StyledButton
-        $primary={true}
-        $margin={30}
-        onClick={() => alert(`Liczba emoji to: ${emojis.length}`)}
-      >
-        Pokaż liczę emoji
-      </StyledButton>
-      <StyledList>
+      <button onClick={() => alert(`Liczba emoji: ${emojis.length}`)}>
+        Pokaż liczbę emoji
+      </button>
+      <ul>
         {emojis.map((emoji) => (
           <StyledListItem key={emoji} emoji={emoji} />
         ))}
-      </StyledList>
+      </ul>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const WIDTH = 100;
+const WIDTH = 120;
 
 export const StyledButton = styled.button`
   background: transparent;
