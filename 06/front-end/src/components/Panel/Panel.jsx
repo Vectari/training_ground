@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { List } from "../List/List";
 import { Form } from "../Form/Form";
 import { ErrorMessage } from "../ErrorMessage/ErrorMessage";
+import { FilterButton } from "../FilterButton/FilterButton";
 import styles from "./Panel.module.css";
 
 export function Panel() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:3000/words")
@@ -51,6 +53,14 @@ export function Panel() {
       });
   }
 
+  function handleFilterClick(category) {
+    const params = category ? `?category=${category}` : "";
+    fetch(`http://localhost:3000/words${params}`)
+      .then((res) => res.json())
+      .then((res) => setData(res));
+    setSelectedCategory(category);
+  }
+
   if (isLoading) {
     return <p>Loading...</p>;
   }
@@ -60,6 +70,26 @@ export function Panel() {
       {error && <ErrorMessage>{error}</ErrorMessage>}
       <section className={styles.section}>
         <Form onFormSunbmit={handleFormSubmit} />
+        <div className={styles.filters}>
+          <FilterButton
+            active={selectedCategory === null}
+            onClick={() => handleFilterClick(null)}
+          >
+            Wszystkie
+          </FilterButton>
+          <FilterButton
+            active={selectedCategory === "noun"}
+            onClick={() => handleFilterClick("noun")}
+          >
+            Rzeczowniki
+          </FilterButton>
+          <FilterButton
+            active={selectedCategory === "verb"}
+            onClick={() => handleFilterClick("verb")}
+          >
+            Czasowniki
+          </FilterButton>
+        </div>
         <List data={data} onDeleteItem={handleDeleteItem} />
       </section>
     </>
