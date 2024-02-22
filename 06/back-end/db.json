@@ -1,40 +1,16 @@
 {
   "words": [
     {
-      "word": "aaaa",
-      "translation": "aaaa",
-      "category": "noun",
-      "id": 8
-    },
-    {
-      "word": "aaaaaaa",
-      "translation": "aaaaaaa",
-      "category": "noun",
-      "id": 9
-    },
-    {
-      "word": "aaaaaaaaaa",
-      "translation": "aaaaaaaaaa",
-      "category": "noun",
-      "id": 10
-    },
-    {
-      "word": "bb",
-      "translation": "bb",
-      "category": "verb",
-      "id": 11
-    },
-    {
-      "word": "bbbb",
-      "translation": "bbbbb",
-      "category": "verb",
-      "id": 12
-    },
-    {
       "word": "bbbbbbb",
       "translation": "bbbbbbbb",
       "category": "verb",
       "id": 13
+    },
+    {
+      "word": "asdasd",
+      "translation": "asdasdas",
+      "category": "verb",
+      "id": 14
     }
   ]
 }
