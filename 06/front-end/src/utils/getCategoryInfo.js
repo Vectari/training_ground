@@ -1,5 +1,4 @@
 export function getCategoryInfo(category) {
-  console.log("getCategoryInfo");
   switch (category) {
     case "noun":
       return "W języku angielskim znajduje się ponad 80 000 rzeczowników!";
