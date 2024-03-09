@@ -33,6 +33,9 @@ export function Timer() {
     clearInterval(intervalRef.current);
     intervalRef.current = null;
   }
+  //
+  //
+  //
 
   return (
     <section className={styles.section}>
