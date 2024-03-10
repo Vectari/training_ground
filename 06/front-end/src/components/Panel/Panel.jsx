@@ -110,8 +110,5 @@ export function Panel({ onError }) {
     </>
   );
 }
-//
-//
-//
-//
+
 //
