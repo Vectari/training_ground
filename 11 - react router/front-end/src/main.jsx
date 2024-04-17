@@ -6,38 +6,39 @@ import NotesList from "./components/notes-list/NotesList";
 import { Note } from "./components/note/Note";
 
 const router = createBrowserRouter([
-  {
-    element: <App />,
-    path: "/",
-    loader: () => {
-      return fetch("http://localhost:3000/folders");
-    },
-    children: [
-      {
-        element: <NotesList />,
-        path: "/notes/:folderId",
-        loader: ({ params }) => {
-          console.log(params);
-          return fetch(
-            `http://localhost:3000/notes?folderId=${params.folderId}`
-          );
+    {
+        element: <App />,
+        path: "/",
+        loader: () => {
+            return fetch("http://localhost:3000/folders");
         },
         children: [
-          {
-            element: <Note />,
-            path: "note/:noteId",
-            loader: ({ params }) => {
-              return fetch(`http://localhost:3000/notes/${params.noteId}`);
+            {
+                path: "notes/:folderId",
+                element: <NotesList />,
+                loader: ({ params }) => {
+                    return fetch(
+                        `http://localhost:3000/notes?folderId=${params.folderId}`
+                    );
+                },
+                children: [
+                    {
+                        path: `note/:noteId`,
+                        element: <Note />,
+                        loader: ({ params }) => {
+                            return fetch(
+                                `http://localhost:3000/notes/${params.noteId}`
+                            );
+                        },
+                    },
+                ],
             },
-          },
         ],
-      },
-    ],
-  },
+    },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>
 );
