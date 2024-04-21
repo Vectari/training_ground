@@ -6,7 +6,7 @@ export function NotFound() {
         <div className={styles["error-page"]}>
             <h2>Strona nieznaleziona!</h2>
             <p>Wpisano niepoprawny adres URL!</p>
-            <Link to="/">Wróć</Link>
+            <Link to="..">Wróć</Link>
         </div>
     );
 }
