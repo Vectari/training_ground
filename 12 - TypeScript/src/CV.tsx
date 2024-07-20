@@ -29,7 +29,7 @@ export function CV({ name, currentJob, jobHistory }: CVProps) {
 
       {showJobHistory && (
         <>
-          <h2>Job History</h2>
+          <h2>Job History:</h2>
           {jobHistory.map((job, index) => {
             return (
               <>
